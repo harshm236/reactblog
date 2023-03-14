@@ -1,24 +1,31 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
+import Footer from './components/Footer';
+import Home from './components/home';
+import { Header } from './components/Header';
+import Bollywood from './components/Bollywood';
+import Hollywood from './components/Hollywood';
+import Technology from './components/Technology';
+import Fitness from './components/Fitness';
+import Food from './components/Food';
+import Common from './components/Common';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+    <Header/>
+    <Routes>
+      <Route path='/' element={<Home/>}></Route>
+      <Route path='/bollywood' element={<Bollywood/>}></Route>
+      <Route path='/hollywood' element={<Hollywood/>}></Route>
+      <Route path='/technology' element={<Technology/>}></Route>
+      <Route path='/fitness' element={<Fitness/>}></Route>
+      <Route path='/food' element={<Food/>}></Route>
+      <Route path='/common' element={<Common/>}></Route>
+      </Routes>
+    <Footer/>
+    </BrowserRouter>
   );
 }
 
