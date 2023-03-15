@@ -12,7 +12,7 @@ function Format(props) {
       })
   }
   useEffect(() => {
-    fetch("http://localhost:3030/api")
+    fetch("https://blogapi-zohy.onrender.com/api")
       .then(async (raw) => await raw.json())
       .then((data) =>
         setData(data.data.filter((item) => item.id === props.data))

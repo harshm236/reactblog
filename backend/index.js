@@ -1,7 +1,7 @@
 const express = require("express")
 const app = express()
 const cors = require("cors")
-const data= require("../src/data/data")
+const data= require("./data")
 
 app.use(cors())
 app.get("/api",(req,res)=>{

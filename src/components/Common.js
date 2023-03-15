@@ -6,7 +6,7 @@ function Common(props){
     const [data,setData]=useState()
     useEffect(()=>{
 
-        fetch("http://localhost:3030/api")
+        fetch("https://blogapi-zohy.onrender.com/api")
         .then((item)=>item.json())
         .then((obj)=>setData(obj))
     },[])
